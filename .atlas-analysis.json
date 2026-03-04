@@ -1,0 +1,101 @@
+{
+  "projectType": "data-platform",
+  "projectName": "CoW Protocol Solver Rewards",
+  "projectDescription": "Data aggregation platform for calculating, validating, and distributing solver reimbursements and rewards on CoW Protocol.",
+  "theme": "aspen",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/accounting-period",
+              "concepts/reward-mechanism",
+              "concepts/slippage-accounting",
+              "concepts/overdrafts"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/setup",
+              "guides/generating-payouts",
+              "guides/validating-payouts",
+              "guides/docker-usage"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/environment",
+              "configuration/networks",
+              "configuration/rewards"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "CLI Commands",
+            "pages": [
+              "api/transfer-file",
+              "api/sync-data"
+            ]
+          },
+          {
+            "group": "Core Modules",
+            "pages": [
+              "api/config",
+              "api/payouts",
+              "api/dune",
+              "api/multisend"
+            ]
+          },
+          {
+            "group": "Data Models",
+            "pages": [
+              "api/models/accounting-period",
+              "api/models/transfer",
+              "api/models/overdraft",
+              "api/models/token"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Automated solver reward calculation for multiple blockchain networks",
+    "Integration with Dune Analytics for blockchain data aggregation",
+    "Multi-chain support (Ethereum, Gnosis, Arbitrum, Base, and more)",
+    "Safe multisig transaction generation for reward distribution",
+    "Slippage tracking and overdraft management",
+    "Configurable reward mechanisms per network"
+  ],
+  "publicApiSurface": [
+    "src.fetch.transfer_file - Generate solver payout transfers",
+    "src.data_sync.sync_data - Sync order data to Dune",
+    "AccountingConfig - Network-specific configuration",
+    "AccountingPeriod - Time period management",
+    "DuneFetcher - Dune Analytics data fetching",
+    "MultiInstanceDBFetcher - Multi-instance database queries",
+    "construct_payouts() - Calculate period payouts",
+    "post_multisend() - Post transactions to Safe",
+    "Transfer - Payout transfer model",
+    "Overdraft - Overdraft tracking model"
+  ]
+}
